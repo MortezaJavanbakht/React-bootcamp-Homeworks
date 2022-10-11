@@ -9,12 +9,56 @@
   </head>
   <body>
     <div id="main-container" class="w-100 h-100">
-      <div id="form-container" class="m-t-16 m-b-16 b-r-16">
-        <div id="logo" class="f-c a-i-c j-c-c b-r-50p">
-          <img src="./assets/images/z.svg" alt="" />
+      <div id="form-container" class="m-t-16 m-b-16 b-r-16 f-c a-i-c j-c-sb">
+        <div id="form__upperPart">
+          <div id="logo" class="f-c a-i-c j-c-c b-r-50p">
+            <img src="./assets/images/z.svg" alt="" />
+          </div>
+          <h2 class="t-c-w m-t-16">LOG IN</h2>
         </div>
-        <h2>LOG IN</h2>
-        <form action=""></form>
+        <form action="" class="w-100">
+          <div
+            id="form__input-username"
+            class="f-r g-8 w-80p j-c-fs a-i-c m-lr-a b-b-w p-b-8 m-b-16"
+          >
+            <img
+              src="./assets/images/user.svg"
+              alt=""
+              class="form__inputImg"
+            /><input
+              type="text"
+              name=""
+              id=""
+              class="b-g-t w-80p b-no t-c-w"
+              placeholder="Username"
+            />
+          </div>
+          <div
+            id="form__input-password"
+            class="f-r g-8 w-80p j-c-fs a-i-c m-lr-a b-b-w p-b-8 m-b-16"
+          >
+            <img
+              src="./assets/images/lock.svg"
+              alt=""
+              class="form__inputImg"
+            /><input
+              type="text"
+              name=""
+              id=""
+              class="b-g-t w-80p b-no t-c-w"
+              placeholder="Password"
+            />
+          </div>
+          <div
+            id="form__rememberMe"
+            class="f-r g-8 w-80p m-lr-a j-c-fs a-i-c p-b-8 m-b-16"
+          >
+            <input type="checkbox" name="" id="form__checkbox" />
+            <label for="form__checkbox" class="t-c-w w-80p">Remember me</label>
+          </div>
+          <button type="submit" class="m-lr-a">Login</button>
+        </form>
+        <a href="#" class="t-c-w">Forgot Password?</a>
       </div>
     </div>
   </body>
