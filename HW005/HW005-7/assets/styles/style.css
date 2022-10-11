@@ -14,3 +14,29 @@
 #card-pic {
   width: 150px;
 }
+
+/* #media-container {
+  height: 20%;
+} */
+
+.media a img {
+  height: 30px;
+}
+
+.media {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+#card__job {
+  font-size: 1.2rem;
+}
