@@ -1,4 +1,6 @@
-function unique(arr) {}
+function unique(arr) {
+  return new Set(arr).values();
+}
 
 let values = [
   "Hare",
