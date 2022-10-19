@@ -22,6 +22,7 @@
               name="firstname"
               id="firstname"
               placeholder="Firstname"
+              pattern="[a-zA-Z]+"
               class="b-no p-l-8 o-l-n w-80"
             />
             <span id="firstname_validation" class="show_valid"></span>
@@ -35,6 +36,7 @@
               name="middlename"
               id="middlename"
               placeholder="Middlename"
+              pattern="[a-zA-Z]*"
               class="b-no p-l-8 o-l-n w-80"
             />
             <span id="middlename_validation" class="show_valid"></span>
@@ -48,6 +50,7 @@
               name="lastname"
               id="lastname"
               placeholder="Lastname"
+              pattern="[a-zA-Z]+"
               class="b-no p-l-8 o-l-n w-80"
             />
             <span id="lastname_validation" class="show_valid"></span>
@@ -88,6 +91,7 @@
               name="phone-code"
               id="phone-code"
               value="+91"
+              pattern="\+[0-9]+"
               class="b-no p-l-8 o-l-n w-80"
             />
             <span id="phone-code_validation" class="show_valid"></span>
@@ -98,6 +102,7 @@
               name="phone-number"
               id="phone-number"
               placeholder="phone no"
+              pattern="[0-9]+"
               class="b-no p-l-8 o-l-n w-80"
             />
             <span id="phone-number_validation" class="show_valid"></span>
@@ -119,10 +124,11 @@
           <label for="email">Email:</label>
           <div class="b-g-w h-100 f-r a-i-c j-c-sb h-2-5-r">
             <input
-              type="email"
+              type="text"
               name="email"
               id="email"
               placeholder="Enter Email"
+              pattern="[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+"
               class="b-no p-l-8 o-l-n w-80"
             />
             <span id="email_validation" class="show_valid"></span>
@@ -145,7 +151,7 @@
           <label for="rePassword">Re-type Password:</label>
           <div class="b-g-w h-100 f-r a-i-c j-c-sb h-2-5-r">
             <input
-              type="rePassword"
+              type="password"
               name="rePassword"
               id="rePassword"
               placeholder="Retype Password"
