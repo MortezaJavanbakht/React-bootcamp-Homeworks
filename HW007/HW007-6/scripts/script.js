@@ -68,3 +68,28 @@ function emailValidation() {
     emailValidate = false;
   }
 }
+
+function passwordValidation() {
+  const minMaxLength = /^[\s\S]{8,32}$/,
+    upper = /[A-Z]/,
+    lower = /[a-z]/,
+    number = /[0-9]/,
+    special = /[ !"#$%&'()*+,\-./:;?@[\\\]^_`{|}~]/;
+  if (
+    minMaxLength.test(passwordInput.value) &&
+    upper.test(passwordInput.value) &&
+    lower.test(passwordInput.value) &&
+    number.test(passwordInput.value) &&
+    special.test(passwordInput.value)
+  ) {
+    passwordSpan.textContent = "✅";
+    passwordValidate = true;
+  } else {
+    passwordSpan.textContent = "❌";
+    passwordValidate = false;
+  }
+}
+
+function repasswordValidation() {}
+
+function registerFunction() {}
