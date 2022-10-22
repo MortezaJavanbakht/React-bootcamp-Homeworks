@@ -6,10 +6,10 @@ button {
   background-color: #55b15e;
 }
 
-input:focus:valid + span::after {
+/* input:focus:valid + span::after {
   content: "✅";
 }
 
 input:focus:invalid + span::after {
   content: "❌";
-}
+} */
