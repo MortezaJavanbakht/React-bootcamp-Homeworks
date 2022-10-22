@@ -13,11 +13,11 @@ const firstnameInput = document.getElementById("firstname"),
   registerBtn = document.getElementById("submit");
 
 let firstnameValidate,
-  phoneCodeValidate,
   phoneNumberValidate,
   emailValidate,
   passwordValidate,
   repasswordValidate = false;
+let phoneCodeValidate = true;
 firstnameInput.addEventListener("input", firstnameValidation);
 phoneCodeInput.addEventListener("input", phoneCodeValidation);
 phoneNumberInput.addEventListener("input", phoneNumberValidation);
@@ -48,13 +48,13 @@ function phoneCodeValidation() {
 }
 
 function phoneNumberValidation() {
-  let regex = /^09(0[1-2]|1[0-9]|3[0-9]|2[0-1]|9[0-9])[0-9]{3}[0-9]{4}$/;
+  let regex = /09(0[1-2]|1[0-9]|3[0-9]|2[0-1]|9[0-9])[0-9]{3}[0-9]{4}/;
   if (regex.test(phoneNumberInput.value)) {
     phoneNumberSpan.textContent = "✅";
-    phoneNumberValidation = true;
+    phoneNumberValidate = true;
   } else {
     phoneNumberSpan.textContent = "❌";
-    phoneNumberValidation = false;
+    phoneNumberValidate = false;
   }
 }
 
@@ -100,4 +100,24 @@ function repasswordValidation() {
   }
 }
 
-function registerFunction() {}
+function registerFunction() {
+  event.preventDefault();
+  if (
+    firstnameValidate &&
+    phoneCodeValidate &&
+    phoneNumberValidate &&
+    emailValidate &&
+    passwordValidate &&
+    repasswordValidate
+  ) {
+    alert("Registering...");
+  } else {
+    if (!firstnameValidate) firstnameSpan.textContent = "❌";
+    if (!phoneCodeValidate) phoneCodeSpan.textContent = "❌";
+    if (!phoneNumberValidate) phoneNumberSpan.textContent = "❌";
+    if (!emailValidate) emailSpan.textContent = "❌";
+    if (!passwordValidate) passwordSpan.textContent = "❌";
+    if (!repasswordValidate) repasswordSpan.textContent = "❌";
+    alert("Please fill the form correctly");
+  }
+}
