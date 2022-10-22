@@ -8,8 +8,8 @@ const firstnameInput = document.getElementById("firstname"),
   emailSpan = document.getElementById("email_validation"),
   passwordInput = document.getElementById("password"),
   passwordSpan = document.getElementById("password_validation"),
-  repasswordInput = document.getElementById("repassword"),
-  repasswordSpan = document.getElementById("repassword_validation"),
+  repasswordInput = document.getElementById("rePassword"),
+  repasswordSpan = document.getElementById("rePassword_validation"),
   registerBtn = document.getElementById("submit");
 
 let firstnameValidate,
@@ -37,7 +37,7 @@ function firstnameValidation() {
 }
 
 function phoneCodeValidation() {
-  let regex = /^(\+|00)[0-9]*$/;
+  let regex = /^(\+|00)[0-9]+$/;
   if (regex.test(phoneCodeInput.value)) {
     phoneCodeSpan.textContent = "✅";
     phoneCodeValidation = true;
@@ -90,6 +90,14 @@ function passwordValidation() {
   }
 }
 
-function repasswordValidation() {}
+function repasswordValidation() {
+  if (passwordInput.value === repasswordInput.value) {
+    repasswordSpan.textContent = "✅";
+    repasswordValidate = true;
+  } else {
+    repasswordSpan.textContent = "❌";
+    repasswordValidate = false;
+  }
+}
 
 function registerFunction() {}
