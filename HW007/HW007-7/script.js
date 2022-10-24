@@ -90,6 +90,8 @@ const products = [
 ];
 
 const productTable = document.getElementById("product-table");
+const videoTitle = document.getElementById("video-title");
+const videoDiv = document.getElementById("video-box");
 
 for (let product of products) {
   const trElement = document.createElement("tr");
@@ -122,10 +124,24 @@ for (let product of products) {
   const tdElement8 = document.createElement("td");
   tdElement8.innerText = product.screenResolution;
   trElement.append(tdElement8);
-  trElement.setAttribute("onclick", `switchVideo('${product.videoSrc}')`);
+  trElement.setAttribute(
+    "onclick",
+    `switchVideo('${product.name}', '${product.videoSrc}')`
+  );
   productTable.append(trElement);
 }
 
-function switchVideo(videoSource) {
-  alert(videoSource);
+function switchVideo(name, videoSource) {
+  const rows = document.querySelectorAll("tr");
+  rows.forEach((row) => (row.className = "m-t-16"));
+  event.target.parentElement.className = "m-t-16 selected";
+  videoDiv.innerHTML = "";
+  videoTitle.innerText = `ویدیوی معرفی ${name}`;
+  const videoElement = document.createElement("video");
+  videoElement.className = "w-100";
+  videoElement.controls = true;
+  videoElement.autoplay = true;
+  videoElement.src = videoSource;
+  videoDiv.append(videoElement);
+  window.scrollTo(0, 0);
 }
