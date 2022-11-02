@@ -48,6 +48,14 @@ html {
   .column {
     max-width: calc(33% - 5px);
   }
-  #last-column {
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .column {
+    max-width: calc(25% - 10px);
   }
 }
