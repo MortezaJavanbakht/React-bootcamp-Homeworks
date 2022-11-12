@@ -9,3 +9,4 @@ let usersMapped = users.map(user => ({fullName: `${user.name} ${user.surname}`, 
 console.log(usersMapped);
 
 console.log(usersMapped[0].id);
+console.log(usersMapped[0].fullName);
