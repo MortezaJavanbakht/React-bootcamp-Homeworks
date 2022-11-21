@@ -66,4 +66,18 @@ body {
     padding: 2rem;
     border: none;
   }
+  .project-section .project-text {
+    padding: 3rem;
+  }
+  .masthead h1 {
+    font-size: 4rem;
+  }
+  .masthead h2 {
+    font-size: 1rem;
+  }
+}
+
+.project-section .project-text {
+  padding: 5rem;
+  font-size: 90%;
 }
