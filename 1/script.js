@@ -78,3 +78,22 @@ class Circle extends NonPolygon {
     super(name, radius);
   }
 }
+
+class Cylindrical extends Circle {
+  constructor(name, radius, height) {
+    super(name, radius);
+    this.height = height;
+  }
+  get height() {
+    return this._height;
+  }
+  set height(value) {
+    this._height = value;
+  }
+  getArea() {
+    return 2 * super.getArea() + super.getPerimeter() * this._height;
+  }
+  getVolume() {
+    return super.getArea() * this._height;
+  }
+}
