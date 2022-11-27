@@ -41,3 +41,22 @@ class Polygon extends Shape {
     return this._width * this._height;
   }
 }
+
+class NonPolygon extends Shape {
+  constructor(name, radius) {
+    super(name);
+    this.radius = radius;
+  }
+  get radius() {
+    return this._radius;
+  }
+  set radius(value) {
+    this._radius = value;
+  }
+  getPerimeter() {
+    return 2 * this._radius * Math.PI;
+  }
+  getArea() {
+    return Math.PI * this._radius * this._radius;
+  }
+}
