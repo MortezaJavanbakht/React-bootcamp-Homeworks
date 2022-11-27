@@ -60,3 +60,15 @@ class NonPolygon extends Shape {
     return Math.PI * this._radius * this._radius;
   }
 }
+
+class Rectangle extends Polygon {
+  constructor(name, width, height) {
+    super(name, width, height);
+  }
+}
+
+class Square extends Polygon {
+  constructor(name, length) {
+    super(name, length, length);
+  }
+}
