@@ -72,3 +72,9 @@ class Square extends Polygon {
     super(name, length, length);
   }
 }
+
+class Circle extends NonPolygon {
+  constructor(name, radius) {
+    super(name, radius);
+  }
+}
