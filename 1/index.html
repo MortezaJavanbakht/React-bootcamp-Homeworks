@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <form action="">
+        <div>
+          <label for="selectOption">shapes: </label>
+          <select name="shape" id="selectOption">
+            <option value="1" selected>Circle</option>
+            <option value="2">Cylindrical</option>
+            <option value="3">Rectangle</option>
+            <option value="4">Square</option>
+          </select>
+        </div>
+        <div>
+          <label for="radius">Radius: </label>
+          <input type="text" name="radius" id="radius" />
+        </div>
+        <div>
+          <label for="width">Width: </label>
+          <input type="text" name="width" id="width" disabled />
+        </div>
+        <div>
+          <label for="height">Height: </label>
+          <input type="text" name="height" id="height" disabled />
+        </div>
+      </form>
+      <div id="results">
+        <div><label>Permimeter: </label><label id="perimeter"></label></div>
+        <div><label>Area: </label><label id="area"></label></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

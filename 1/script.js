@@ -93,7 +93,79 @@ class Cylindrical extends Circle {
   getArea() {
     return 2 * super.getArea() + super.getPerimeter() * this._height;
   }
-  getVolume() {
+  getPerimeter() {
     return super.getArea() * this._height;
   }
+}
+
+const shapeTypeElement = document.getElementById("selectOption"),
+  radiusInput = document.getElementById("radius"),
+  widthInput = document.getElementById("width"),
+  heightInput = document.getElementById("height"),
+  perimeterLabel = document.getElementById("perimeter"),
+  areaLabel = document.getElementById("area"),
+  inputElements = document.querySelectorAll("input");
+
+const changeShape = (event) => {
+  widthInput.value = "";
+  heightInput.value = "";
+  radiusInput.value = "";
+  if (event.target.value === 1) {
+    widthInput.setAttribute("disabled", "true");
+    heightInput.setAttribute("disabled", "true");
+    radiusInput.removeAttribute("disabled");
+    shape = new Circle();
+  }
+  if (event.target.value === 2) {
+    widthInput.setAttribute("disabled", "true");
+    heightInput.removeAttribute("disabled");
+    radiusInput.removeAttribute("disabled");
+    shape = new Cylindrical();
+  }
+  if (event.target.value === 3) {
+    widthInput.removeAttribute("disabled");
+    heightInput.removeAttribute("disabled");
+    radiusInput.setAttribute("disabled", "true");
+    shape = new Rectangle();
+  }
+  if (event.target.value === 4) {
+    widthInput.removeAttribute("disabled");
+    heightInput.setAttribute("disabled", "true");
+    radiusInput.setAttribute("disabled", "true");
+    shape = new Square();
+  }
+};
+shapeTypeElement.addEventListener("change", changeShape);
+let shape;
+const calculation = () => {
+  if (shapeTypeElement.value === 1 && +radiusInput.value) {
+    shape.radius = +radiusInput.value;
+    showCalcResults();
+  }
+  if (
+    shapeTypeElement.value === 2 &&
+    +radiusInput.value &&
+    +heightInput.value
+  ) {
+    shape.radius = +radiusInput.value;
+    shape.height = +heightInput.value;
+    showCalcResults();
+  }
+  if (shapeTypeElement.value === 3 && +widthInput.value && +heightInput.value) {
+    shape.width = +widthInput.value;
+    shape.height = +heightInput.value;
+    showCalcResults();
+  }
+  if (shapeTypeElement.value === 4 && +widthInput.value) {
+    shape.width = +widthInput.value;
+    shape.height = +widthInput.value;
+    showCalcResults();
+  }
+};
+inputElements.forEach((element) =>
+  element.addEventListener("input", calculation)
+);
+function showCalcResults() {
+  perimeterLabel.innerText = shape.getPerimeter();
+  areaLabel.innerText = shape.getArea();
 }
