@@ -1,19 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Document</title>
   </head>
   <body>
     <div id="mainContainer">
-      <div id="menuContainer">
+      <div id="menuContainer" class="container">
         <div id="header"><h1>رستوران مک دونالد شعبه تهران</h1></div>
-        <div id="foodContainer"></div>
+        <div id="foodContainer">
+          <div class="product" id="burger">
+            <img src="./assets/images/burger.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>همبرگر معمولی</h3>
+              <h5>10000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="mushroom">
+            <img src="./assets/images/mushroom.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>همبرگر با قارچ</h3>
+              <h5>15000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="cheese">
+            <img src="./assets/images/cheese.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>همبرگر با قارچ و پنیر</h3>
+              <h5>20000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="halo">
+            <img src="./assets/images/halo.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>هالوپینو برگر</h3>
+              <h5>25000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="potato">
+            <img src="./assets/images/potato.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>سیب زمینی</h3>
+              <h5>15000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="garlic">
+            <img src="./assets/images/garlic.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>نان سیر</h3>
+              <h5>20000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="cesar">
+            <img src="./assets/images/cesar.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>سالاد سزار</h3>
+              <h5>20000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="salad">
+            <img src="./assets/images/salad.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>سالاد فصل</h3>
+              <h5>15000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="lemonade">
+            <img src="./assets/images/lemonade.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>لیموناد</h3>
+              <h5>8000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="product" id="doogh">
+            <img src="./assets/images/doogh.jpg" alt="" />
+            <div class="product__spec d-flex f-d-c j-s-e w-full">
+              <h3>دوغ</h3>
+              <h5>8000 تومان</h5>
+              <div class="d-flex j-s-b">
+                <div class="product__spec__counter">
+                  <a class="plusBtn"><i class="bi bi-plus-square-fill"></i></a>
+                  <label>0</label>
+                  <a class="minusBtn"><i class="bi bi-dash-square-fill"></i></a>
+                </div>
+                <div><label>0 تومان</label></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="billContainer"></div>
+      <div id="billContainer" class="container"></div>
     </div>
   </body>
 </html>
