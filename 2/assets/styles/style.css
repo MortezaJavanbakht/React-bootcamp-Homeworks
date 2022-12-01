@@ -1,0 +1,192 @@
+@font-face {
+  font-family: VazirMatn;
+  src: url("../fonts/Vazirmatn-FD-Regular.woff2") format("woff2");
+}
+html,
+body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: VazirMatn;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#mainContainer {
+  width: 100%;
+  height: fit-content;
+  min-height: 100%;
+  background-color: #da291c;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  background-color: #f0f8ff;
+  border-radius: 16px;
+}
+
+#menuContainer {
+  width: 60%;
+  height: fit-content;
+}
+#menuContainer #header {
+  text-align: center;
+  height: 4rem;
+  border-bottom: 2px solid #dce4ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#menuContainer #foodContainer {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.product {
+  background-color: #fff;
+  height: 96px;
+  width: 47%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 8px;
+}
+.product img {
+  height: 100%;
+}
+.product .product__spec {
+  height: 100%;
+}
+.product div .product__spec__counter a {
+  cursor: pointer;
+}
+.product div .product__spec__counter a i {
+  font-size: 1.4rem;
+  color: #9e1010;
+}
+.product div .product__spec__counter label {
+  width: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+#billContainer {
+  width: 30%;
+  height: 350px;
+  font-size: 1.2rem;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#billContainer #billContainer__firstPart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#billContainer #billContainer__firstPart #billContainer__firstPart__off {
+  justify-content: center;
+  height: 2.2rem;
+}
+#billContainer #billContainer__firstPart #billContainer__firstPart__off input {
+  width: 90%;
+  border: none;
+  font-size: 1rem;
+  padding: 0 8px;
+}
+#billContainer #billContainer__firstPart #billContainer__firstPart__off a {
+  background-color: #9e1010;
+  width: 2.2rem;
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  cursor: pointer;
+}
+#billContainer #billContainer__firstPart #billContainer__firstPart__off a i {
+  font-size: 1.7rem;
+  color: white;
+}
+#billContainer #billContainer__secondPart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#billContainer #billContainer__secondPart div {
+  background-color: #ffc72c;
+}
+#billContainer #billContainer__secondPart button {
+  color: white;
+  background-color: #9e1010;
+  border: none;
+  line-height: 3.5rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  #menuContainer {
+    width: 50%;
+  }
+  #menuContainer #header {
+    font-size: 0.8rem;
+  }
+  #menuContainer #foodContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #menuContainer #foodContainer .product {
+    width: 95%;
+  }
+  #billContainer {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 725px) {
+  #mainContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  #menuContainer {
+    width: 90%;
+  }
+  #billContainer {
+    width: 60%;
+  }
+}
+.d-flex {
+  display: flex;
+}
+
+.j-s-b {
+  justify-content: space-between;
+}
+
+.j-s-e {
+  justify-content: space-evenly;
+}
+
+.f-d-c {
+  flex-direction: column;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

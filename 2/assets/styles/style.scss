@@ -28,6 +28,7 @@ body {
   min-height: 100%;
   background-color: $mainBgColor;
   padding-top: 24px;
+  padding-bottom: 24px;
   display: flex;
   justify-content: space-around;
 }
@@ -143,6 +144,39 @@ body {
       border-radius: 8px;
       cursor: pointer;
     }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #menuContainer {
+    width: 50%;
+    #header {
+      font-size: 0.8rem;
+    }
+    #foodContainer {
+      flex-direction: column;
+      align-items: center;
+      .product {
+        width: 95%;
+      }
+    }
+  }
+  #billContainer {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  #mainContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  #menuContainer{
+    width: 90%;
+  }
+  #billContainer{
+    width: 60%;
   }
 }
 
