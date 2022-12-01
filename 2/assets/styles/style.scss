@@ -24,7 +24,8 @@ body {
 
 #mainContainer {
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  min-height: 100%;
   background-color: $mainBgColor;
   padding-top: 24px;
   display: flex;
@@ -86,6 +87,61 @@ body {
         display: inline-block;
         text-align: center;
       }
+    }
+  }
+}
+
+#billContainer {
+  width: 30%;
+  height: 350px;
+  font-size: 1.2rem;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  #billContainer__firstPart {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    #billContainer__firstPart__off {
+      justify-content: center;
+      height: 2.2rem;
+      input {
+        width: 90%;
+        border: none;
+        font-size: 1rem;
+        padding: 0 8px;
+      }
+      a {
+        background-color: $buttonColor;
+        width: 2.2rem;
+        display: flex;
+        justify-content: center;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        cursor: pointer;
+        i {
+          font-size: 1.7rem;
+          color: white;
+        }
+      }
+    }
+  }
+  #billContainer__secondPart {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    div {
+      background-color: #ffc72c;
+    }
+    button {
+      color: white;
+      background-color: $buttonColor;
+      border: none;
+      line-height: 3.5rem;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
     }
   }
 }
