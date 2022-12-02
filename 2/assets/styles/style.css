@@ -138,6 +138,29 @@ body {
   cursor: pointer;
 }
 
+#modal {
+  display: none;
+  top: 40%;
+  left: 35%;
+  width: 30%;
+  height: 200px;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid black;
+}
+#modal button {
+  color: white;
+  background-color: #9e1010;
+  border: none;
+  line-height: 3.5rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0 32px;
+}
+
 @media screen and (max-width: 992px) {
   #menuContainer {
     width: 50%;
@@ -168,6 +191,10 @@ body {
   #billContainer {
     width: 60%;
   }
+  #modal {
+    width: 60%;
+    left: 20%;
+  }
 }
 .d-flex {
   display: flex;
@@ -179,6 +206,14 @@ body {
 
 .j-s-e {
   justify-content: space-evenly;
+}
+
+.j-s-c {
+  justify-content: center;
+}
+
+.a-i-c {
+  align-items: center;
 }
 
 .f-d-c {

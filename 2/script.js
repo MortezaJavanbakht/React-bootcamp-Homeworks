@@ -64,8 +64,19 @@ class Order {
     this._totalPayment = this._totalPrice + this._tax - this._off;
     return this._totalPayment;
   }
+  checkOffCode(code) {
+    if (code === "off10") {
+      this._offPercent = 0.1;
+      return true;
+    } else if (code === "off25") {
+      this._offPercent = 0.25;
+      return true;
+    }
+    return false;
+  }
 }
 
+let finalize = false;
 const foodObjects = {};
 foodObjects["burger"] = new Food("burger", 10000);
 foodObjects["mushroom"] = new Food("mushroom", 15000);
@@ -79,6 +90,14 @@ foodObjects["lemonade"] = new Food("lemonade", 8000);
 foodObjects["doogh"] = new Food("doogh", 8000);
 const order = new Order();
 const foodContainer = document.getElementById("foodContainer");
+const offCodeBtn = document.getElementById("offCodeBtn"),
+  offCodeInput = document.getElementById("offCodeInput"),
+  modalBtn = document.getElementById("modalBtn"),
+  submitBtn = document.getElementById("submitBtn");
+
+offCodeBtn.addEventListener("click", offCodeInsertion);
+modalBtn.addEventListener("click", closeModal);
+submitBtn.addEventListener("click", submitFunction);
 
 const addAndRemoveFunction = (event) => {
   const classes = Array.from(event.target.classList);
@@ -90,15 +109,17 @@ const addAndRemoveFunction = (event) => {
 foodContainer.addEventListener("click", addAndRemoveFunction);
 
 function updateVars(foodName) {
-  order.orderlist = foodObjects;
-  const foodCountLabel = document.querySelector(
-    `#${foodName} .product__spec__counter label`
-  );
-  const foodSumPriceLabel = document.querySelector(
-    `#${foodName} .product__totalPrice`
-  );
-  foodCountLabel.innerText = foodObjects[foodName].count;
-  foodSumPriceLabel.innerText = foodObjects[foodName].sumPrice();
+  if (foodName) {
+    order.orderlist = foodObjects;
+    const foodCountLabel = document.querySelector(
+      `#${foodName} .product__spec__counter label`
+    );
+    const foodSumPriceLabel = document.querySelector(
+      `#${foodName} .product__totalPrice`
+    );
+    foodCountLabel.innerText = foodObjects[foodName].count;
+    foodSumPriceLabel.innerText = foodObjects[foodName].sumPrice();
+  }
   const totalPriceLabel = document.getElementById("totalPrice"),
     taxLabel = document.getElementById("tax"),
     offLabel = document.getElementById("off"),
@@ -107,4 +128,41 @@ function updateVars(foodName) {
   taxLabel.innerText = order.calculateTax();
   offLabel.innerText = order.calculateOff();
   totalPaymentLabel.innerText = order.calculateTotalPayment();
+}
+
+function offCodeInsertion() {
+  if (order.checkOffCode(offCodeInput.value)) {
+    updateVars();
+    showModal("کد تخفیف اعمال گردید");
+    offCodeInput.setAttribute("disabled", "true");
+    offCodeBtn.setAttribute("disabled", "true");
+  } else {
+    showModal("کد تخفیف معتبر نیست");
+  }
+}
+
+function showModal(message) {
+  const modalContainer = document.getElementById("modal");
+  const modalMessage = document.getElementById("modalMessage");
+  const mainContainer = document.getElementById("mainContainer");
+  mainContainer.style.filter = "blur(8px)";
+  modalMessage.innerText = message;
+  modalContainer.style.display = "flex";
+}
+
+function closeModal() {
+  if (finalize) window.location.reload();
+  else {
+    const modalContainer = document.getElementById("modal");
+    const mainContainer = document.getElementById("mainContainer");
+    modalContainer.style.display = "none";
+    mainContainer.style.filter = "none";
+  }
+}
+
+function submitFunction() {
+  if (order.calculateTotalPrice() > 0) {
+    finalize = true;
+    showModal("سفارش با موفقیت ثبت گردید");
+  } else showModal("هنوز هیچ غذایی انتخاب نشده است");
 }
