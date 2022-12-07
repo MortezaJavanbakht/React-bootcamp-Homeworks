@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-fit min-h-full">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -10,41 +10,103 @@
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <title>Document</title>
   </head>
-  <body>
-    <nav class="flex items-center justify-between flex-wrap bg-[#0F3460] p-6">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <span class="font-semibold text-xl tracking-tight">Todo App</span>
-      </div>
-      <div class="block lg:hidden">
-        <button
-          class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
-        >
-          <svg
-            class="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow">
-          <a
-            href="#responsive-header"
-            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Home
-          </a>
-          <a
-            href="#responsive-header"
-            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Todos
-          </a>
+  <body class="h-screen m-0 p-0">
+    <div class="bg-[#16213E] m-0 p-0 h-full">
+      <nav class="flex items-center justify-between flex-wrap bg-[#0F3460] p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-semibold text-xl tracking-tight">Todo App</span>
         </div>
-      </div>
-    </nav>
+        <div class="block lg:hidden">
+          <button
+            class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            <a
+              href="#responsive-header"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            >
+              Home
+            </a>
+            <a
+              href="./todos.html"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            >
+              Todos
+            </a>
+          </div>
+        </div>
+      </nav>
+      <form class="container mx-auto">
+        <div class="flex flex-col -mx-3 mb-6 justify-center">
+          <div class="w-full md:w-1/2 px-3 mb-6 mt-6 mx-auto">
+            <label
+              class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+              for="grid-title"
+            >
+              Title *
+            </label>
+            <input
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-title"
+              type="text"
+              placeholder="What will you do today?"
+            />
+            <p class="text-red-500 text-xs italic">
+              Please fill out this field.
+            </p>
+          </div>
+          <div class="w-full md:w-1/2 px-3 mb-6 mx-auto">
+            <label
+              class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+              for="grid-description"
+            >
+              Description
+            </label>
+            <input
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-description"
+              type="text"
+              placeholder="Some information"
+            />
+          </div>
+          <div class="w-full md:w-1/2 px-3 mb-6 mx-auto">
+            <label
+              class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+              for="grid-date"
+            >
+              Due Date *
+            </label>
+            <input
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-date"
+              type="date"
+              placeholder="10/31/2021"
+            />
+            <p class="text-red-500 text-xs italic">
+              Please fill out this field.
+            </p>
+          </div>
+          <div class="w-full md:w-1/2 px-3 mb-6 mx-auto">
+            <button
+              class="w-full rounded py-3 text-white bg-[#E94560] leading-tight hover:outline-none hover:bg-red-500 text-lg"
+              id="form__saveBtn"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
