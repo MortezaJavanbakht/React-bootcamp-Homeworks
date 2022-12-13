@@ -1,4 +1,4 @@
-import { getTodos, addTodo } from "./requests.js";
+import { addTodo } from "./requests.js";
 
 const formSubmitBtn = document.getElementById("form__submitBtn"),
   todoTitleInput = document.getElementById("grid-title"),
@@ -7,27 +7,19 @@ const formSubmitBtn = document.getElementById("form__submitBtn"),
   todoTitleError = document.getElementById("grid-title__error"),
   todoDateError = document.getElementById("grid-date__error"),
   toastSuccess = document.getElementById("toast__success"),
-  toastCloseBtn = document.getElementById("toast__closeBtn"),
-  todosContainer = document.getElementById("todosContainer"),
-  paginationBox = document.getElementById("paginationPart"),
-  todosPageLink = document.getElementById("todosPage"),
-  homePageLink = document.getElementById("homePage"),
-  formBox = document.getElementById("addForm");
+  toastCloseBtn = document.getElementById("toast__closeBtn");
 
-let allData;
-fetchTodos();
 formSubmitBtn.addEventListener("click", formSubmitFunc);
 todoTitleInput.addEventListener("input", RemoveTitleError);
 todoDateInput.addEventListener("input", RemoveDateError);
 toastCloseBtn.addEventListener("click", closeToast);
-todosPageLink.addEventListener("click", showTodosPage);
-homePageLink.addEventListener("click", showHomePage);
 
 function closeToast() {
   toastSuccess.classList.add("hidden");
 }
 
-function formSubmitFunc() {
+function formSubmitFunc(event) {
+  event.preventDefault();
   if (!todoTitleInput.value || !todoDateInput.value) {
     if (!todoTitleInput.value) {
       todoTitleInput.classList.add("border-red-500");
@@ -83,32 +75,4 @@ function generateTodo() {
   });
 }
 
-function showTodosPage() {
-  formBox.classList.add("hidden");
-  todosContainer.classList.remove("hidden");
-  paginationBox.classList.remove("hidden");
-  render();
-}
-
-function showHomePage() {
-  formBox.classList.remove("hidden");
-  todosContainer.classList.add("hidden");
-  paginationBox.classList.add("hidden");
-}
-
-function fetchTodos(pageNum = 1) {
-  getTodos().then((res) => {
-    if (res) {
-      allData = res.sort((a, b) => a.createdAt - b.createdAt);
-    }
-  });
-}
-
-function render(pageNum = 1) {
-  const pageTodoCount = 5;
-  const inPageData = allData.slice(
-    (pageNum - 1) * pageTodoCount,
-    pageNum * pageTodoCount
-  );
-  inPageData.forEach((item) => {});
-}
+// function showTodosPage() {}
