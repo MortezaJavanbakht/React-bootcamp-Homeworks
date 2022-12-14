@@ -6,6 +6,12 @@ window.deleteFunction = deleteFunction;
 
 let allData;
 const pageTodoCount = 4;
+const mainContainer = document.getElementById("mainContainer"),
+  modal = document.getElementById("modal"),
+  modalTodoTitle = document.getElementById("modal__todoTitle"),
+  modalTodoDate = document.getElementById("modal__todoDate"),
+  modalDeleteBtn = document.getElementById("modal__deleteBtn"),
+  modalCancelBtn = document.getElementById("modal__cancelBtn");
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
@@ -104,4 +110,29 @@ function editFunction(selectedID) {
   window.location.replace(`./index.html?id=${selectedID}`);
 }
 
-function deleteFunction(selectedID) {}
+function deleteFunction(selectedID, todoTitle, todoDate) {
+  mainContainer.style.filter = "blur(8px)";
+  modalTodoTitle.innerText = todoTitle;
+  let showingDate;
+  if (+todoDate) {
+    const newDate = new Date(+todoDate);
+    showingDate = `${newDate.getFullYear()}-${
+      newDate.getMonth() + 1
+    }-${newDate.getDate()}`;
+  } else showingDate = todoDate;
+  modalTodoDate.innerText = showingDate;
+  modal.classList.remove("hidden");
+  modalDeleteBtn.addEventListener("click", () => performDelete(selectedID));
+  modalCancelBtn.addEventListener("click", fadeModal);
+}
+
+function fadeModal() {
+  mainContainer.style.filter = "none";
+  modal.classList.add("hidden");
+}
+
+function performDelete(forDeleteID) {
+  deleteTodo(forDeleteID).then((res) =>
+    window.location.replace(`./todos.html?page=${pageNum}&reloaddata=true`)
+  );
+}
