@@ -1,4 +1,8 @@
-import { getTodos } from "./requests.js";
+import { getTodos, editTodo, deleteTodo } from "./requests.js";
+
+window.changeChecked = changeChecked;
+window.editFunction = editFunction;
+window.deleteFunction = deleteFunction;
 
 let allData;
 const pageTodoCount = 4;
@@ -44,7 +48,8 @@ function render(inPageData) {
         newDate.getMonth() + 1
       }-${newDate.getDate()}`;
     } else showingDate = item.dueDate;
-    thirdDiv.innerHTML = `<input type="checkbox" name="" id="" onclick="changeChecked(${item.id})"/><p>${item.title}</p><p>${showingDate}</p>`;
+    const todoStatus = item.checked ? " checked" : "";
+    thirdDiv.innerHTML = `<input type="checkbox" name="" id="" onclick="changeChecked(event,${item.id})"${todoStatus}/><p>${item.title}</p><p>${showingDate}</p>`;
     secondDiv.append(thirdDiv);
     const fourthDiv = document.createElement("div");
     fourthDiv.innerHTML = `<i class="bi bi-pencil-square text-2xl hover:text-teal-200 hover:cursor-pointer" onclick="editFunction(${item.id})"></i><i class="bi bi-trash text-2xl hover:text-teal-200 hover:cursor-pointer" onclick="deleteFunction(${item.id})"></i>`;
@@ -86,8 +91,17 @@ function createPagination() {
   paginationUL.append(nextLI);
 }
 
-function changeChecked(selectedID) {}
+function changeChecked(event, selectedID) {
+  editTodo({ checked: event.target.checked }, selectedID).then((res) => {
+    if (!res) {
+      alert("Operation failed! Try again!");
+    }
+    window.location.replace(`./todos.html?page=${pageNum}&reloaddata=true`);
+  });
+}
 
-function editFunction(selectedID) {}
+function editFunction(selectedID) {
+  window.location.replace(`./index.html?id=${selectedID}`);
+}
 
 function deleteFunction(selectedID) {}
