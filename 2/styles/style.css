@@ -1,0 +1,42 @@
+.side {
+  width: 300px;
+  border: 1px solid gray;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  gap: 16px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+}
+
+#buttonContainer {
+  width: 100px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+#buttonContainer div {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #a3cdef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #a3cdef;
+  font-weight: 900;
+}
+
+#mainContainer {
+  background-color: #eeeeee;
+}
