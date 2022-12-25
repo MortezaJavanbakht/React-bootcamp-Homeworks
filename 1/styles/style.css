@@ -73,3 +73,33 @@
   display: flex;
   justify-content: space-around;
 }
+
+.taskClose {
+  color: rgb(180, 3, 3);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#modal {
+  background-color: #add8e6;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 200px);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+#modal__button {
+  padding: 4px 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #90ee90;
+}
+
+.d-none {
+  display: none;
+}
