@@ -35,8 +35,25 @@
   border-radius: 50%;
   color: #a3cdef;
   font-weight: 900;
+  cursor: pointer;
+}
+
+#buttonContainer div:hover {
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
 }
 
 #mainContainer {
   background-color: #eeeeee;
+}
+
+#buttonContainer .disabled {
+  cursor: not-allowed;
+}
+
+#buttonContainer .disabled:hover {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
 }
