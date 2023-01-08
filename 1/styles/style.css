@@ -17,6 +17,7 @@
 
 #mainContent {
   height: fit-content;
+  padding: 16px 48px;
 }
 
 .card {
