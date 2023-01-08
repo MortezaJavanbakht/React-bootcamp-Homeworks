@@ -1,0 +1,55 @@
+#mainContainer {
+  width: 100%;
+  min-height: 100%;
+  background-color: #050110;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#header {
+  height: 150px;
+  font-size: 32px;
+  background-color: #12121c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainContent {
+  height: fit-content;
+}
+
+.card {
+  width: 400px;
+  color: white;
+  height: 150px;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #cfac67;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+}
+
+.spec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.spec .firstname {
+  font-size: 1.5rem;
+  padding-bottom: 12px;
+  color: #cfac67;
+}
+
+.card:hover {
+  background-color: #a28d0e;
+  width: 410px;
+  box-shadow: 0 0 15px rgba(216, 231, 103, 0.5);
+}
