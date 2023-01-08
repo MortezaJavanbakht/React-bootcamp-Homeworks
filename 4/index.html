@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html,
+      #mainContainer {
+        width: 99%;
+        height: 98%;
+      }
+      table {
+        margin: auto;
+        width: 400px;
+        text-align: center;
+        line-height: 1.5rem;
+        border-spacing: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainContainer">
+      <table>
+        <thead>
+          <th>Month</th>
+          <th>Sales</th>
+          <th>Amount</th>
+        </thead>
+        <tr>
+          <td>January</td>
+          <td>85</td>
+          <td>$13,555.00</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>73</td>
+          <td>$9500.00</td>
+        </tr>
+        <tr>
+          <td>March</td>
+          <td>135</td>
+          <td>$18,000.00</td>
+        </tr>
+        <tr>
+          <td>April</td>
+          <td>45</td>
+          <td>$27,500.00</td>
+        </tr>
+        <tr>
+          <td>May</td>
+          <td>69</td>
+          <td>13,000.00</td>
+        </tr>
+        <tr>
+          <td>June</td>
+          <td>105</td>
+          <td>$20,500.00</td>
+        </tr>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+      $("tr:odd").css("background-color", "gainsboro");
+    </script>
+  </body>
+</html>
