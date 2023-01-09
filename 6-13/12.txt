@@ -1,0 +1,5 @@
+Solution 1: Configure the Backend to Allow CORS
+
+Solution 2: Use a Proxy Server
+
+Solution 3: Bypass the Error Using a Browser Extension

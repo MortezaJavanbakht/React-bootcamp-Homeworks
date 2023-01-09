@@ -1,0 +1,9 @@
+Ping (Packet Internet Groper) is a method for determining communication latency between two networks.
+Simply put, ping is a method of determining latency or the amount of time it takes for data to travel
+between two devices or across a network. As communication latency decreases, communication effectiveness improves.
+
+
+
+Jitter is the variation in time delay between when a signal is transmitted and when it's received over
+ a network connection, measuring the variability in ping. This is often caused by network congestion, 
+ poor hardware performance and not implementing packet prioritization.

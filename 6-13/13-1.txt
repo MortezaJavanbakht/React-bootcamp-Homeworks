@@ -1,0 +1,19 @@
+PWA:
+Progressive Web Applications (PWAs) are apps built with web technologies that we probably all know 
+and love, like HTML, CSS, and JavaScript. But they have the feel and functionality of an actual native app. 
+
+PWAs are built with the capabilities like push notifications and the ability to work offline. They 
+are also built on and enhanced with modern APIs which makes it easy to deliver improved capabilities 
+along with reliability and the ability to install them on any device.
+
+PWAs takes advantage of the huge web ecosystem this is inclusive of the plugins, and community and 
+the relative ease of deploying and keeping a website contrary to a native application which is pretty 
+difficult to develop. This means you can build a PWA quickly and easily.
+
+Characteristics:
+-Responsiveness
+-Installable
+-Independent Connectivity
+-Discoverability
+-Appearance
+-Cross Platform

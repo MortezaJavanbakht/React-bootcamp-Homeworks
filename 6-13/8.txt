@@ -1,0 +1,26 @@
+ICMP: (No Port)
+The Internet Control Message Protocol (ICMP) is a network layer protocol used by network devices to 
+diagnose network communication issues. ICMP is mainly used to determine whether or not data is 
+reaching its intended destination in a timely manner. Commonly, the ICMP protocol is used on 
+network devices, such as routers.
+
+IMAP: (143)
+Internet Message Access Protocol (IMAP) is a protocol for accessing email or bulletin board messages 
+from a (possibly shared) mail server or service. IMAP allows a client e-mail program to access 
+remote message stores as if they were local. Email stored on an IMAP server can be manipulated from 
+a workstation at the office, a desktop computer at home or a notebook computer while traveling, 
+without requiring the transfer of messages or files back and forth between these computers.
+
+RDP: (3389)
+Remote desktop protocol (RDP) is a secure network communications protocol developed by Microsoft. 
+It enables network administrators to remotely diagnose problems that individual users encounter and 
+gives users remote access to their physical work desktop computers.
+RDP can be used by employees working from home or traveling who need access to their work computers. 
+RDP is also often used by support technicians who need to diagnose and repair a user's system 
+remotely and by admins providing system maintenance.
+
+Telnet: (23)
+Telnet is an application protocol used on the Internet or local area network to provide a 
+bidirectional interactive text-oriented communication facility using a virtual terminal connection.
+User data is interspersed in-band with Telnet control information in an 8-bit byte oriented data 
+connection over the Transmission Control Protocol (TCP).

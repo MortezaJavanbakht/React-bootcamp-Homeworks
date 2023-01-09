@@ -1,0 +1,27 @@
+The OSI Model is a logical and conceptual model that defines network communication used by systems 
+open to interconnection and communication with other systems. The Open System Interconnection (OSI
+ Model) also defines a logical network and effectively describes computer packet transfer by using
+  various layers of protocols.
+
+TCP/IP helps you to determine how a specific computer should be connected to the internet and how 
+you can transmit data between them. It helps you to create a virtual network when multiple 
+computer networks are connected together.
+TCP/IP stands for Transmission Control Protocol/ Internet Protocol. It is specifically designed as
+ a model to offer highly reliable and end-to-end byte stream over an unreliable internetwork.
+
+
+Key Difference Between TCP/IP and OSI Model
+-OSI has 7 layers, whereas TCP/IP has 4 layers.
+-The OSI Model is a logical and conceptual model that defines network communication used by systems 
+ open to interconnection and communication with other systems. On the other hand, TCP/IP helps you 
+ to determine how a specific computer should be connected to the internet and how you can be 
+ transmitted between them.
+-OSI header is 5 bytes, whereas TCP/IP header size is 20 bytes.
+-OSI refers to Open Systems Interconnection, whereas TCP/IP refers to Transmission Control Protocol.
+-OSI follows a vertical approach, whereas TCP/IP follows a horizontal approach.
+-OSI model, the transport layer, is only connection-oriented, whereas the TCP/IP model is both 
+ connection-oriented and connectionless.
+-OSI model is developed by ISO (International Standard Organization), whereas TCP Model is developed
+ by ARPANET (Advanced Research Project Agency Network).
+-OSI model helps you to standardize router, switch, motherboard, and other hardware, whereas TCP/IP
+ helps you to establish a connection between different types of computers.
