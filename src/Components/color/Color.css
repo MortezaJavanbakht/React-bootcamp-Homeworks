@@ -22,11 +22,13 @@
 }
 
 #randomColorContainer {
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: auto;
-  justify-content: center;
+  /* margin: auto; */
+  justify-content: flex-start;
   align-items: center;
   padding: 16px 0;
 }

@@ -1,0 +1,20 @@
+#adjustContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 50%;
+}
+
+.colorSquare {
+  width: 100px;
+  height: 100px;
+}
+
+.bottomPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
