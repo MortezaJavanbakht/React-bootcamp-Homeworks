@@ -1,0 +1,32 @@
+.colorSquare {
+  width: 100px;
+  height: 100px;
+}
+
+.colorBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  width: 80%;
+}
+
+#addColorBtn {
+  width: 80%;
+  height: 2rem;
+  background-color: #3187fe;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+#randomColorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+}
