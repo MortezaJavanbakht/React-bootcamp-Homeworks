@@ -1,38 +1,86 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   text-align: center;
+  background: hsla(61, 81%, 88%, 1);
+
+  background: linear-gradient(
+    225deg,
+    hsla(61, 81%, 88%, 1) 0%,
+    hsla(310, 65%, 85%, 1) 50%,
+    hsla(7, 89%, 69%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(61, 81%, 88%, 1) 0%,
+    hsla(310, 65%, 85%, 1) 50%,
+    hsla(7, 89%, 69%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(61, 81%, 88%, 1) 0%,
+    hsla(310, 65%, 85%, 1) 50%,
+    hsla(7, 89%, 69%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F8F9C7", endColorstr="#F2C1EA", GradientType=1 );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.formContainer {
+  background-color: white;
+  width: 25rem;
+  height: fit-content;
+  padding: 32px 8px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 16px;
+  border-radius: 16px;
+}
+
+* {
+  margin: auto;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: none;
+  width: 80%;
+  outline: none;
+  padding: 8px 0;
+}
+
+.inlinePart {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 80%;
+  padding: 0;
+}
+
+button {
+  padding: 8px;
+  width: 80%;
+  background-color: #3187fe;
+  border: none;
+  border-radius: 8px;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button span {
+  font-weight: bold;
+  float: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link {
+  color: #3187fe;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+label {
+  padding-left: 8px;
 }
